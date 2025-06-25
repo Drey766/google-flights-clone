@@ -1,0 +1,377 @@
+.searchFormContainer {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9aa0a6;
+  background-color: #303134;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 60px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .3), 0 4px 8px 3px rgba(0, 0, 0, .15);
+}
+
+.searchForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  position: relative;
+}
+
+.trip-selections {
+  height: 40px;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.trip-inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.trip-location, .trip-dates {
+  width: 49%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-group {
+  width: max-content;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 10px;
+  height: 100%;
+  margin-right: 20px;
+  box-sizing: border-box;
+  font-weight: 400;
+  transition: border .3s ease-out;
+}
+
+.input-group:hover{
+  border-color: #9aa0a6;
+}
+
+
+
+.dropdown-menus {
+  transition: all .2s ease-out;
+}
+
+.dropdown-menus:hover, .trip-type-dropdown:hover, .travelClass-dropdown:hover {
+  background-color: rgb(60,64,67);
+}
+
+.tripType-label, .travelClass-label {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .7rem !important;
+}
+
+.passenger-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trip-type-dropdown, .travelClass-dropdown {
+  width: 85%;
+  height: 100%;
+  box-sizing: border-box;
+  width: max-content;
+  background-color: #303134;
+  position: relative;
+  font-weight: 500 !important;
+  font-size: .8rem;
+  transition: all .2s ease-out;
+}
+
+.trip-type-dropdown:focus, .trip-type-dropdown:focus-visible, .travelClass-dropdown:focus,.travelClass-dropdown:focus-visible{
+  border-bottom: 1px solid #669df6 !important;
+  outline: none !important;
+}
+
+.tripType-option {
+  font-weight: 500 !important;
+}
+
+
+
+
+.location-input, .date-input {
+  width: 47%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid #5f6368;
+  box-sizing: border-box;
+  padding-left: 7px;
+}
+
+.location-label, .date-label {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9aa0a6;
+}
+
+.location-input-field, .date-input-field {
+  width: 85%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: transparent !important;
+}
+
+.location-input-field:focus, .date-input-field:focus {
+  outline: none !important;
+  border-bottom: 2px solid #669df6 !important;
+  border-right: 2px solid #669df6 !important;
+
+}
+
+.passenger-field-container {
+  position: relative;
+  flex: 1;
+}
+
+.passenger-field {
+  height: 100%;
+  width: max-content;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.passenger-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgb(32, 33, 36);
+  border: 1px solid #ccc;
+  color: white;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+  width: max-content;
+  max-width: 40vw;
+  height: max-content;
+}
+
+.passenger-dropdown {
+  height: 100%;
+  width: max-content;
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all .2s ease-out;
+}
+
+.passenger-dropdown:hover {
+  background-color: #5f6368;
+}
+
+.passenger-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.passenger-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-right: 15px;
+}
+
+.passanger-text {
+  color: white;
+}
+
+.passenger-info small {
+  color: #666;
+  font-size: 0.7rem;
+}
+
+.passenger-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.passenger-button {
+  width: 25px !important;
+  height: 30px;
+  padding: 0 !important;
+  border: 1px solid #ccc !important;
+  color: #666 !important;
+  background: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease-out;
+}
+
+.passenger-controls button:hover:not(:disabled) {
+  background: #f0f0f0;
+}
+
+.passenger-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.passenger-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.passengerActions-button {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.passengerAction-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+input, select {
+    border: none !important;
+    padding: 8px 12px;
+    font-weight: 500;
+}
+
+.search-button-container {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.search-button {
+  width: 150px !important;
+  height: 40px !important;
+  background-color: #1a73e8 !important;
+  color: black !important;
+  position: absolute;
+  bottom: -100% !important;
+  left: 0 !important;
+  border-radius: 24px !important;
+  font-weight: 500 !important;
+  text-transform: capitalize !important;
+}
+
+.search-button:hover {
+  background-color: #2980f1 !important;
+}
+
+
+@media screen and (max-width: 700px) {
+  .searchFormContainer {
+    width: 90%;
+    padding: 10px;
+
+  }
+
+  .searchForm {
+    width: 100%;
+  }
+
+  .trip-selections {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    overflow: hidden;
+  }
+
+  .dropdown-menus {
+    margin-right: 5px;
+    width: auto;
+    gap: 0;
+    width: fit-content;
+  }
+
+  .passenger-dropdown {
+    width: fit-content;
+    margin-right: 5px;
+    gap: 0;
+  }
+
+  .trip-inputs {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .trip-location, .trip-dates {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .tripType-label {
+    margin-right: 3px;
+  }
+
+  .passenger-options {
+    width: max-content;
+    max-width: fit-content;
+  }
+
+  .search-button-container {
+    height: 30px;
+  }
+
+  input, select {
+    padding: 1px 1px;
+    font-size: .8rem;
+  }
+
+  .travelClass-label, .data-label {
+    font-size: .8rem !important;
+  }
+
+  .location-input, .date-input {
+    width: 48%;
+    margin-right: 8px;
+    padding-left: 4px;
+  }
+
+  
+
+  
+}
+
+

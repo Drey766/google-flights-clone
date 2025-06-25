@@ -1,0 +1,84 @@
+.flights-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.fligthscloneImgCont {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.flights-image {
+  height: 24vh;
+  max-height: 300px;
+  min-height: 135px;
+  width: 100%;
+  transform: translate3d(-50%, 0, 0);
+  background-color: transparent !important;
+}
+
+.flights-title {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flights-h1 {
+  font-weight: 500;
+}
+
+.results-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.results-title {
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.loading-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.error-container {
+  padding: 20px; 
+  background-color: #fee; 
+  border: 1px solid #fcc;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.error-message {
+  color: red;
+  margin: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .results-container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .results-container {
+    width: 95%;
+  }
+}
