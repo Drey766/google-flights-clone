@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -52,3 +53,7 @@ export default tseslint.config({
   },
 })
 ```
+=======
+# google-flights-clone
+A google flights clone made with react js
+>>>>>>> 714e4611788dde0373b95080a6d4b4ff1c6fe525
