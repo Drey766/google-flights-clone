@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
 import type { SearchParams } from '../types';
 import './SearchForm.css'; 
-import { SyncAlt, ArrowRightAlt, Person, FlightClass, LocationOn, CalendarMonth, CalendarToday } from '@mui/icons-material';
+import SyncAltIcon from '@mui/icons-material/SyncAlt';
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import PersonIcon from '@mui/icons-material/Person';
+import FlightClassIcon from '@mui/icons-material/FlightClass';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import { Button } from '@mui/material';
 
 interface Props {
@@ -123,7 +129,7 @@ const SearchForm: React.FC<Props> = ({ onSearch }) => {
         {/* Trip Type Selection */}
         <div className="trip-selections">
           <div className="input-group dropdown-menus">
-            <label htmlFor="tripType" className='tripType-label'>{tripType=='oneway' ? <ArrowRightAlt /> : <SyncAlt /> }</label>
+            <label htmlFor="tripType" className='tripType-label'>{tripType=='oneway' ? <ArrowRightAltIcon /> : <SyncAltIcon /> }</label>
             <select 
               id="tripType"
               name="tripType" 
@@ -139,7 +145,7 @@ const SearchForm: React.FC<Props> = ({ onSearch }) => {
         <div className="input-group passenger-dropdown">
           <div className="passenger-field-container">
             <div className="passenger-field" onClick={() => setShowPassengerDropdown(!showPassengerDropdown)}>
-              <label className='passenger-label'><Person /></label>
+              <label className='passenger-label'><PersonIcon /></label>
               <span className='passanger-text'>{getPassengerText()}</span>
               <span className="dropdown-arrow">{showPassengerDropdown ? '▲' : '▼'}</span>
             </div>
@@ -235,7 +241,7 @@ const SearchForm: React.FC<Props> = ({ onSearch }) => {
 
           {/* Travel Class */}
           <div className="input-group dropdown-menus">
-            <label htmlFor="travelClass" className='travelClass-label'><FlightClass /></label>
+            <label htmlFor="travelClass" className='travelClass-label'><FlightClassIcon /></label>
             <select 
               id="travelClass"
               name="travelClass" 
@@ -255,7 +261,7 @@ const SearchForm: React.FC<Props> = ({ onSearch }) => {
         <div className="trip-inputs">
           <div className="trip-location">
             <div className="input-group location-input">
-              <label htmlFor="origin" className='location-label'><LocationOn /> </label>
+              <label htmlFor="origin" className='location-label'><LocationOnIcon /> </label>
               <input
                 id="origin"
                 name="origin"
@@ -268,7 +274,7 @@ const SearchForm: React.FC<Props> = ({ onSearch }) => {
             </div>
             {/* Destination */}
             <div className="input-group location-input">
-              <label htmlFor="destination" className='location-label'><LocationOn /> </label>
+              <label htmlFor="destination" className='location-label'><LocationOnIcon /> </label>
               <input
                 id="destination"
                 name="destination"
@@ -283,7 +289,7 @@ const SearchForm: React.FC<Props> = ({ onSearch }) => {
           <div className="trip-dates">
             {/* Departure Date */}
             <div className="input-group date-input">
-              <label htmlFor="departureDate" className='date-label'><CalendarMonth /> </label>
+              <label htmlFor="departureDate" className='date-label'><CalendarMonthIcon /> </label>
               <input 
                 id="departureDate"
                 className='date-input-field'
@@ -301,7 +307,7 @@ const SearchForm: React.FC<Props> = ({ onSearch }) => {
             {/* Return Date */}
             {tripType === 'roundtrip' && (
               <div className="input-group date-input">
-                <label htmlFor="returnDate" className='date-label'><CalendarToday /> </label>
+                <label htmlFor="returnDate" className='date-label'><CalendarTodayIcon /> </label>
                 <input 
                   id="returnDate"
                   className='date-input-field'

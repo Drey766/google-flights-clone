@@ -17,6 +17,8 @@
     "@mui/icons-material": "^7.1.2",
     "@mui/material": "^7.1.2",
     "axios": "^1.10.0",
+    "classnames": "^2.5.1",
+    "clsx": "^2.1.1",
     "firebase": "^11.9.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"

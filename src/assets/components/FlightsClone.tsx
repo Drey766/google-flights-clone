@@ -5,7 +5,7 @@ import { searchFlights } from '../api/searchFlights';
 import { searchAirport } from '../api/searchAirports';
 import SearchForm from './SearchForm';
 import FlightsList from './FlightsList';
-import './FlightsClone.css'; // Assuming you have a CSS file for styling
+import './FlightsClone.css';
 import svg from '../flights_nc_dark_theme_4.svg'
 import { CircularProgress } from '@mui/material';
 
@@ -22,7 +22,7 @@ const FlightsClone: React.FC = () => {
     setFlights([]);
 
     try {
-      // Step 1: Get origin and destination airport data
+      //Get origin and destination airport data
       console.log('Searching for airports...');
       const [originAirport, destinationAirport] = await Promise.all([
         searchAirport(params.origin),
@@ -32,7 +32,7 @@ const FlightsClone: React.FC = () => {
       console.log('Origin airport result:', originAirport);
       console.log('Destination airport result:', destinationAirport);
 
-      // Step 2: Validate both airport results
+      //Validate both airport results
       if (!originAirport) {
         setError(`Could not find airport information for origin: "${params.origin}". Please try a different city or airport name.`);
         return;
@@ -54,7 +54,7 @@ const FlightsClone: React.FC = () => {
         return;
       }
 
-      // Step 3: Perform the flight search
+      //Perform the flight search
       console.log('Searching for flights...');
       const results = await searchFlights(
         { id: originAirport.skyId, entityId: originAirport.entityId },

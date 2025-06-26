@@ -55,7 +55,6 @@ export const searchFlights = async (
 
     console.log('Final API params:', params);
 
-    // Use axios.request instead of axios.get to match the documentation exactly
     const options = {
       method: 'GET' as const,
       url: 'https://sky-scrapper.p.rapidapi.com/api/v2/flights/searchFlights',
